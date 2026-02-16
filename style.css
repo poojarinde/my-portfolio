@@ -1,0 +1,165 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: Arial, sans-serif;
+}
+
+body{
+  background:#f5f6fa;
+}
+
+/* Navbar */
+
+.navbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px 30px;
+  background:#2f3640;
+}
+
+.navbar a{
+  color:white;
+  text-decoration:none;
+  margin-left:15px;
+}
+
+.logo{
+  color:#00a8ff;
+}
+
+/* Hero */
+
+.hero{
+  text-align:center;
+  padding:90px 20px;
+  background:white;
+}
+
+.hero h1{
+  font-size:36px;
+}
+
+.hero button{
+  margin-top:20px;
+  padding:10px 25px;
+  border:none;
+  background:#00a8ff;
+  color:white;
+  cursor:pointer;
+}
+
+/* Skills */
+
+.skills{
+  padding:60px 20px;
+  background:#ffffff;
+  text-align:center;
+}
+
+.skill-box{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:15px;
+  margin-top:20px;
+}
+
+.skill{
+  background:#00a8ff;
+  color:white;
+  padding:10px 20px;
+  border-radius:20px;
+}
+
+/* Projects */
+
+.projects{
+  padding:60px 20px;
+  text-align:center;
+}
+
+.project-cards{
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  flex-wrap:wrap;
+  margin-top:20px;
+}
+
+.card{
+  background:white;
+  padding:20px;
+  width:220px;
+  border-radius:8px;
+  box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+.card button{
+  margin-top:10px;
+  padding:6px 12px;
+  border:none;
+  background:#00a8ff;
+  color:white;
+  cursor:pointer;
+}
+
+/* Modal */
+
+.modal{
+  display:none;
+  position:fixed;
+  left:0;
+  top:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.5);
+}
+
+.modal-content{
+  background:white;
+  width:300px;
+  margin:120px auto;
+  padding:20px;
+  position:relative;
+  border-radius:8px;
+}
+
+#closeModal{
+  position:absolute;
+  right:10px;
+  top:5px;
+  font-size:20px;
+  cursor:pointer;
+}
+
+/* Contact */
+
+.contact-section{
+  background:white;
+  padding:60px 20px;
+  text-align:center;
+}
+
+.contact-section form{
+  max-width:400px;
+  margin:auto;
+  display:flex;
+  flex-direction:column;
+}
+
+.contact-section input,
+.contact-section textarea{
+  margin-bottom:10px;
+  padding:10px;
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+  .navbar{
+    flex-direction:column;
+    gap:10px;
+  }
+}

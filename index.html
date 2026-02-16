@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pooja Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="navbar">
+  <h2 class="logo">Pooja</h2>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section id="home" class="hero">
+  <h1>Hi, I am Pooja</h1>
+  <p>Frontend Developer Trainee</p>
+  <button id="hireBtn">Hire Me</button>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="skills">
+  <h2>My Skills</h2>
+
+  <div class="skill-box">
+    <div class="skill">HTML</div>
+    <div class="skill">CSS</div>
+    <div class="skill">JavaScript</div>
+    <div class="skill">Git & GitHub</div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="projects">
+  <h2>My Projects</h2>
+
+  <div class="project-cards">
+
+    <div class="card">
+      <h3>Portfolio Website</h3>
+      <p>Responsive personal website</p>
+      <button class="viewBtn">View Details</button>
+    </div>
+
+    <div class="card">
+      <h3>Landing Page</h3>
+      <p>Simple marketing website</p>
+      <button class="viewBtn">View Details</button>
+    </div>
+
+  </div>
+</section>
+
+<!-- MODAL -->
+<div class="modal" id="projectModal">
+  <div class="modal-content">
+    <span id="closeModal">&times;</span>
+    <h3>Project Details</h3>
+    <p>This project is created using HTML, CSS and JavaScript.</p>
+  </div>
+</div>
+
+<!-- CONTACT -->
+<section id="contact" class="contact-section">
+  <h2>Contact Me</h2>
+
+  <form id="contactForm">
+    <input type="text" id="name" placeholder="Your Name">
+    <input type="email" id="email" placeholder="Your Email">
+    <textarea id="message" placeholder="Your Message"></textarea>
+    <button type="submit">Send</button>
+  </form>
+</section>
+
+<script src="js/script.js"></script>
+</body>
+</html>
