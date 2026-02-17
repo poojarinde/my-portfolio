@@ -2,17 +2,21 @@
 const hireBtn = document.getElementById("hireBtn");
 
 hireBtn.addEventListener("click", () => {
-  alert("Thank you for your interest!");
+  document.getElementById("contact").scrollIntoView({behavior:"smooth"});
 });
 
 
-// Modal logic
+// Modal logic (single modal for all projects)
 const viewButtons = document.querySelectorAll(".viewBtn");
 const modal = document.getElementById("projectModal");
 const closeModal = document.getElementById("closeModal");
+const modalTitle = document.getElementById("modalTitle");
+const modalDesc = document.getElementById("modalDesc");
 
 viewButtons.forEach(btn => {
   btn.addEventListener("click", () => {
+    modalTitle.textContent = btn.getAttribute("data-title");
+    modalDesc.textContent = btn.getAttribute("data-desc");
     modal.style.display = "block";
   });
 });
