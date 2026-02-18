@@ -14,6 +14,7 @@ closes.forEach(btn => {
     btn.closest(".modal").style.display = "none";
   });
 });
+
 window.addEventListener("click", (e) => {
   modals.forEach(m => {
     if (e.target === m) {
