@@ -2,28 +2,36 @@
   margin:0;
   padding:0;
   box-sizing:border-box;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family:'Poppins',sans-serif;
 }
 
 body{
-  background:#f5f7fb;
+  background:#f4f6fb;
+  color:#222;
 }
 
-/* NAVBAR */
+/* Navbar */
 
 header{
-  background:#111;
+  position:sticky;
+  top:0;
+  z-index:100;
+  background:#0f172a;
 }
 
 .navbar{
+  max-width:1100px;
+  margin:auto;
   display:flex;
   justify-content:space-between;
   align-items:center;
-  padding:15px 10%;
+  padding:14px 20px;
 }
 
 .logo{
-  color:white;
+  color:#fff;
+  font-size:22px;
+  font-weight:600;
 }
 
 .navbar ul{
@@ -33,78 +41,104 @@ header{
 }
 
 .navbar a{
-  color:white;
+  color:#e5e7eb;
   text-decoration:none;
+  font-size:14px;
 }
 
 .navbar a:hover{
-  color:#5b6cff;
+  color:#38bdf8;
 }
 
-/* HERO */
+/* Hero */
 
 .hero{
-  padding:80px 10%;
-  text-align:center;
-  background:#5b6cff;
+  min-height:90vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:linear-gradient(135deg,#0f172a,#1e3a8a);
   color:white;
+  text-align:center;
 }
 
-/* ABOUT */
+.hero h1{
+  font-size:40px;
+  margin-bottom:10px;
+}
+
+.hero-btn{
+  display:inline-block;
+  margin-top:20px;
+  padding:10px 22px;
+  background:#38bdf8;
+  color:#0f172a;
+  text-decoration:none;
+  border-radius:6px;
+  font-weight:600;
+}
+
+/* Sections */
+
+section{
+  padding:70px 20px;
+}
+
+.section-title{
+  text-align:center;
+  font-size:28px;
+  margin-bottom:40px;
+  color:#0f172a;
+}
+
+/* About */
 
 .about{
-  padding:60px 10%;
+  max-width:900px;
+  margin:auto;
   text-align:center;
 }
 
-/* SKILLS */
-
-.skills{
-  padding:60px 10%;
-  text-align:center;
-}
+/* Skills */
 
 .skills-grid{
+  max-width:900px;
+  margin:auto;
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(120px,1fr));
-  gap:18px;
-  margin-top:30px;
+  gap:20px;
 }
 
 .skill-box{
   background:white;
-  padding:15px;
-  border-radius:8px;
-  font-weight:600;
-  box-shadow:0 6px 12px rgba(0,0,0,0.08);
+  padding:16px;
+  border-radius:10px;
+  text-align:center;
+  box-shadow:0 10px 20px rgba(0,0,0,0.06);
   transition:0.3s;
 }
 
 .skill-box:hover{
-  background:#5b6cff;
-  color:white;
-  transform:scale(1.08);
+  background:#38bdf8;
+  color:#0f172a;
+  transform:translateY(-5px);
 }
 
-/* PROJECTS */
-
-.projects{
-  padding:60px 10%;
-  text-align:center;
-}
+/* Projects */
 
 .project-grid{
+  max-width:1000px;
+  margin:auto;
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
   gap:25px;
-  margin-top:30px;
 }
 
 .project-card{
   background:white;
   padding:25px;
-  border-radius:12px;
-  box-shadow:0 10px 20px rgba(0,0,0,0.08);
+  border-radius:14px;
+  box-shadow:0 12px 25px rgba(0,0,0,0.08);
   transition:0.3s;
 }
 
@@ -114,23 +148,68 @@ header{
 
 .view-btn{
   margin-top:15px;
-  padding:8px 16px;
   border:none;
+  padding:8px 16px;
+  background:#1e3a8a;
+  color:white;
   border-radius:6px;
   cursor:pointer;
-  background:#5b6cff;
-  color:white;
 }
 
-/* MODAL */
+/* Achievements */
+
+.ach-grid{
+  max-width:900px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:22px;
+}
+
+.ach-card{
+  background:white;
+  padding:22px;
+  border-radius:12px;
+  box-shadow:0 10px 20px rgba(0,0,0,0.08);
+  border-left:5px solid #38bdf8;
+}
+
+/* Contact */
+
+.contact-box{
+  max-width:600px;
+  margin:auto;
+  text-align:center;
+}
+
+.contact-form{
+  margin-top:25px;
+  display:grid;
+  gap:12px;
+}
+
+.contact-form input,
+.contact-form textarea{
+  padding:10px;
+  border-radius:6px;
+  border:1px solid #ccc;
+}
+
+.contact-form button{
+  padding:10px;
+  background:#38bdf8;
+  border:none;
+  font-weight:600;
+  cursor:pointer;
+  border-radius:6px;
+}
+
+/* Modal */
 
 .modal{
   display:none;
   position:fixed;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
+  inset:0;
   background:rgba(0,0,0,0.6);
   justify-content:center;
   align-items:center;
@@ -139,9 +218,9 @@ header{
 .modal-content{
   background:white;
   padding:25px;
-  border-radius:10px;
-  width:90%;
+  border-radius:12px;
   max-width:450px;
+  width:90%;
   position:relative;
   animation:pop 0.3s ease;
 }
@@ -153,25 +232,21 @@ header{
 
 .close{
   position:absolute;
-  right:15px;
+  right:14px;
   top:10px;
-  font-size:22px;
   cursor:pointer;
+  font-size:22px;
 }
 
-/* CONTACT */
-
-.contact{
-  padding:50px 10%;
-  text-align:center;
-  background:#111;
-  color:white;
-}
-/* MOBILE */
+/* Mobile */
 
 @media(max-width:600px){
-  .navbar{
-    flex-direction:column;
-    gap:10px;
+  .navbar ul{
+    flex-wrap:wrap;
+    justify-content:center;
+  }
+
+  .hero h1{
+    font-size:30px;
   }
 }

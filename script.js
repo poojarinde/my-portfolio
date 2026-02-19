@@ -15,9 +15,9 @@ closes.forEach(btn => {
   });
 });
 
-window.addEventListener("click", (e) => {
+window.addEventListener("click", e => {
   modals.forEach(m => {
-    if (e.target === m) {
+    if(e.target === m){
       m.style.display = "none";
     }
   });
