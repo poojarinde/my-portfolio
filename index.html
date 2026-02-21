@@ -4,9 +4,7 @@
   <meta charset="UTF-8">
   <title>Pooja Rinde | Portfolio</title>
 
-  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -27,7 +25,7 @@
 
 
 <!-- HERO -->
-<section class="hero" id="home">
+<section class="hero reveal" id="home">
   <div class="hero-content">
     <h1>Hi, I'm Pooja Rinde</h1>
     <p>Full Stack Developer</p>
@@ -37,20 +35,19 @@
 
 
 <!-- ABOUT -->
-<section class="about" id="about">
+<section class="about reveal" id="about">
   <h2 class="section-title">About Me</h2>
-
   <p>
     I have completed my internship from Infosys Springboard in Full Stack
     Developer (Angular). I have completed my Diploma from Government Polytechnic,
-    Khamgaon and currently pursuing my Engineering from Siddhivinayak Technical
+    Khamgaon and currently pursuing Engineering from Siddhivinayak Technical
     Campus, Shegaon.
   </p>
 </section>
 
 
 <!-- SKILLS -->
-<section class="skills" id="skills">
+<section class="skills reveal" id="skills">
   <h2 class="section-title">My Skills</h2>
 
   <div class="skills-grid">
@@ -67,7 +64,7 @@
 
 
 <!-- PROJECTS -->
-<section class="projects" id="projects">
+<section class="projects reveal" id="projects">
   <h2 class="section-title">Projects</h2>
 
   <div class="project-grid">
@@ -89,11 +86,10 @@
 
 
 <!-- ACHIEVEMENTS -->
-<section class="achievements" id="achievements">
+<section class="achievements reveal" id="achievements">
   <h2 class="section-title">Achievements</h2>
 
   <div class="ach-grid">
-
     <div class="ach-card">
       <h4>Infosys Springboard Internship</h4>
       <p>Completed Full Stack Developer Internship (Angular)</p>
@@ -105,27 +101,28 @@
     </div>
 
     <div class="ach-card">
-      <h4>Full Stack Project</h4>
-      <p>Built real-time bidding platform – BidNow</p>
+      <h4>BidNow Project</h4>
+      <p>Built a real-time bidding platform with dashboards</p>
     </div>
-
   </div>
 </section>
 
 
 <!-- CONTACT -->
-<section class="contact" id="contact">
+<section class="contact reveal" id="contact">
   <h2 class="section-title">Contact Me</h2>
 
   <div class="contact-box">
     <p><b>Phone:</b> 9637113928</p>
     <p><b>Email:</b> poojarinde@gmail.com</p>
 
-    <form class="contact-form">
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
-      <textarea placeholder="Your Message"></textarea>
+    <form id="contactForm" class="contact-form">
+      <input type="text" id="name" placeholder="Your Name">
+      <input type="email" id="email" placeholder="Your Email">
+      <textarea id="message" placeholder="Your Message"></textarea>
       <button type="submit">Send Message</button>
+
+      <p id="formMsg"></p>
     </form>
   </div>
 </section>
@@ -138,26 +135,22 @@
     <span class="close">&times;</span>
     <h3>BidNow – Real Time Bidding System</h3>
     <p>
-      BidNow is a real-time bidding web application with
-      Admin, Auctioneer and Bidder dashboards.
+      Real-time bidding platform with Admin, Auctioneer and Bidder dashboards.
     </p>
     <p><b>Tech:</b> HTML, CSS, JavaScript, Node.js, Express.js, MongoDB</p>
   </div>
 </div>
-
 
 <div class="modal" id="modal2">
   <div class="modal-content">
     <span class="close">&times;</span>
     <h3>Personal Portfolio Website</h3>
     <p>
-      Responsive portfolio website to showcase projects, skills and contact
-      information.
+      Responsive portfolio website with modern UI and animations.
     </p>
     <p><b>Tech:</b> HTML, CSS, JavaScript</p>
   </div>
 </div>
-
 
 <script src="script.js"></script>
 </body>
