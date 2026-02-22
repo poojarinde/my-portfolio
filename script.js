@@ -1,71 +1,61 @@
-/* ---------- Project Modals ---------- */
+const reveals = document.querySelectorAll(".reveal");
+const navLinks = document.querySelectorAll(".navbar a");
 
-const cards = document.querySelectorAll(".project-card");
-const modals = document.querySelectorAll(".modal");
-const closes = document.querySelectorAll(".close");
+window.addEventListener("scroll", () => {
 
-cards.forEach(card => {
-  card.addEventListener("click", () => {
-    const id = card.getAttribute("data-modal");
-    document.getElementById(id).style.display = "flex";
-  });
-});
-
-closes.forEach(btn => {
-  btn.addEventListener("click", () => {
-    btn.closest(".modal").style.display = "none";
-  });
-});
-
-window.addEventListener("click", e => {
-  modals.forEach(m => {
-    if(e.target === m){
-      m.style.display = "none";
+  reveals.forEach(sec=>{
+    const top = sec.getBoundingClientRect().top;
+    if(top < window.innerHeight - 100){
+      sec.classList.add("active");
     }
   });
+
+  document.querySelectorAll("section").forEach(section=>{
+    const top = section.offsetTop - 120;
+    const bottom = top + section.offsetHeight;
+    const id = section.getAttribute("id");
+
+    if(window.scrollY >= top && window.scrollY < bottom){
+      navLinks.forEach(l=>l.classList.remove("active"));
+      document.querySelector('.navbar a[href="#'+id+'"]')?.classList.add("active");
+    }
+  });
+
 });
 
+/* MODALS */
+function openModal(type){
+  if(type==="bidnow"){
+    document.getElementById("bidnowModal").style.display="flex";
+  }
+  if(type==="portfolio"){
+    document.getElementById("portfolioModal").style.display="flex";
+  }
+}
 
-/* ---------- Contact Form Validation ---------- */
+function closeModal(type){
+  if(type==="bidnow"){
+    document.getElementById("bidnowModal").style.display="none";
+  }
+  if(type==="portfolio"){
+    document.getElementById("portfolioModal").style.display="none";
+  }
+}
 
-const form = document.getElementById("contactForm");
-const msg  = document.getElementById("formMsg");
-
-form.addEventListener("submit", function(e){
+/* CONTACT FORM VALIDATION */
+document.getElementById("contactForm").addEventListener("submit",function(e){
   e.preventDefault();
 
-  const name = document.getElementById("name").value.trim();
-  const email = document.getElementById("email").value.trim();
-  const message = document.getElementById("message").value.trim();
+  let name = document.getElementById("name").value.trim();
+  let email = document.getElementById("email").value.trim();
+  let msg = document.getElementById("message").value.trim();
+  let formMsg = document.getElementById("formMsg");
 
-  if(name === "" || email === "" || message === ""){
-    msg.style.color = "red";
-    msg.textContent = "Please fill all fields.";
+  if(name==="" || email==="" || msg===""){
+    formMsg.innerText="Please fill all fields.";
     return;
   }
 
-  msg.style.color = "green";
-  msg.textContent = "Message sent successfully!";
-
-  form.reset();
+  formMsg.innerText="Message sent successfully!";
+  this.reset();
 });
-
-
-/* ---------- Scroll Reveal Animation ---------- */
-
-const reveals = document.querySelectorAll(".reveal");
-
-function revealOnScroll(){
-  const windowHeight = window.innerHeight;
-
-  reveals.forEach(section => {
-    const top = section.getBoundingClientRect().top;
-
-    if(top < windowHeight - 100){
-      section.classList.add("active");
-    }
-  });
-}
-
-window.addEventListener("scroll", revealOnScroll);
-revealOnScroll();

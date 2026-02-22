@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Pooja Rinde | Portfolio</title>
-
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>Pooja Rinde | Portfolio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-<header>
-  <nav class="navbar">
-    <div class="logo">Pooja</div>
-    <ul>
-      <li><a href="#home">Home</a></li>
+<header class="navbar">
+  <div class="logo">Pooja<span>.</span></div>
+  <nav>
+    <ul id="navLinks">
+      <li><a href="#home" class="active">Home</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#projects">Projects</a></li>
@@ -23,132 +24,158 @@
   </nav>
 </header>
 
-
 <!-- HERO -->
-<section class="hero reveal" id="home">
+<section class="hero" id="home">
   <div class="hero-content">
-    <h1>Hi, I'm Pooja Rinde</h1>
-    <p>Full Stack Developer</p>
-    <a href="#projects" class="hero-btn">View My Work</a>
+    <h1>Hi, I'm <span>Pooja Rinde</span></h1>
+    <h3>Full Stack Developer</h3>
+    <p>
+      Passionate about building modern, responsive and scalable web
+      applications using JavaScript and full stack technologies.
+    </p>
+    <div class="hero-btns">
+      <a href="#projects" class="btn">View Projects</a>
+      <a href="#contact" class="btn-outline">Contact Me</a>
+    </div>
   </div>
 </section>
-
 
 <!-- ABOUT -->
-<section class="about reveal" id="about">
+<section class="section reveal" id="about">
   <h2 class="section-title">About Me</h2>
-  <p>
-    I have completed my internship from Infosys Springboard in Full Stack
-    Developer (Angular). I have completed my Diploma from Government Polytechnic,
-    Khamgaon and currently pursuing Engineering from Siddhivinayak Technical
-    Campus, Shegaon.
-  </p>
-</section>
-
-
-<!-- SKILLS -->
-<section class="skills reveal" id="skills">
-  <h2 class="section-title">My Skills</h2>
-
-  <div class="skills-grid">
-    <div class="skill-box">HTML</div>
-    <div class="skill-box">CSS</div>
-    <div class="skill-box">JavaScript</div>
-    <div class="skill-box">Node.js</div>
-    <div class="skill-box">Express.js</div>
-    <div class="skill-box">MongoDB</div>
-    <div class="skill-box">GitHub</div>
-    <div class="skill-box">Angular</div>
+  <div class="about-box">
+    <p>
+      I am a passionate Full-Stack Developer who enjoys building real-world,
+      scalable and user-focused web applications.
+      I have hands-on experience with HTML, CSS, JavaScript, Node.js,
+      Express.js and MongoDB, and I love converting ideas into fully working
+      products.
+      I have worked on real-time systems like an online bidding platform and
+      gained professional training through the Infosys Springboard Full Stack
+      program.
+      My goal is to continuously improve my skills and create impactful digital
+      solutions with clean code and modern technologies.
+    </p>
   </div>
 </section>
 
+<!-- SKILLS -->
+<section class="section reveal" id="skills">
+  <h2 class="section-title">Skills</h2>
+  <div class="skills-grid">
+    <div class="skill">HTML</div>
+    <div class="skill">CSS</div>
+    <div class="skill">JavaScript</div>
+    <div class="skill">Node.js</div>
+    <div class="skill">Express.js</div>
+    <div class="skill">MongoDB</div>
+    <div class="skill">Git & GitHub</div>
+    <div class="skill">Angular</div>
+  </div>
+</section>
 
 <!-- PROJECTS -->
-<section class="projects reveal" id="projects">
+<section class="section reveal" id="projects">
   <h2 class="section-title">Projects</h2>
 
   <div class="project-grid">
 
-    <div class="project-card" data-modal="modal1">
-      <h3>BidNow – Real Time Bidding System</h3>
-      <p>Full Stack Web Application</p>
-      <button class="view-btn">View Details</button>
+    <div class="project-card">
+      <h3>BidNow – Real Time Bidding Platform</h3>
+      <p>
+        Full stack auction platform with real-time bidding.
+        Includes Bidder, Admin and Auctioneer dashboards.
+      </p>
+      <button class="btn" onclick="openModal('bidnow')">View Details</button>
     </div>
 
-    <div class="project-card" data-modal="modal2">
+    <div class="project-card">
       <h3>Personal Portfolio Website</h3>
-      <p>Responsive Website</p>
-      <button class="view-btn">View Details</button>
+      <p>
+        Responsive and interactive personal portfolio website
+        built using HTML, CSS and JavaScript.
+      </p>
+      <button class="btn" onclick="openModal('portfolio')">View Details</button>
     </div>
 
   </div>
 </section>
-
 
 <!-- ACHIEVEMENTS -->
-<section class="achievements reveal" id="achievements">
+<section class="section reveal" id="achievements">
   <h2 class="section-title">Achievements</h2>
 
-  <div class="ach-grid">
-    <div class="ach-card">
-      <h4>Infosys Springboard Internship</h4>
-      <p>Completed Full Stack Developer Internship (Angular)</p>
+  <div class="timeline">
+
+    <div class="timeline-item">
+      <span></span>
+      <div>
+        <h4>Infosys Springboard Internship</h4>
+        <p>Completed Full Stack Developer Internship with Angular.</p>
+      </div>
     </div>
 
-    <div class="ach-card">
-      <h4>Diploma Completed</h4>
-      <p>Government Polytechnic, Khamgaon</p>
+    <div class="timeline-item">
+      <span></span>
+      <div>
+        <h4>Diploma Completed</h4>
+        <p>Government Polytechnic, Khamgaon.</p>
+      </div>
     </div>
 
-    <div class="ach-card">
-      <h4>BidNow Project</h4>
-      <p>Built a real-time bidding platform with dashboards</p>
+    <div class="timeline-item">
+      <span></span>
+      <div>
+        <h4>Engineering (Pursuing)</h4>
+        <p>Siddhivinayak Technical Campus, Shegaon.</p>
+      </div>
     </div>
+
   </div>
 </section>
 
-
 <!-- CONTACT -->
-<section class="contact reveal" id="contact">
+<section class="section reveal" id="contact">
   <h2 class="section-title">Contact Me</h2>
 
   <div class="contact-box">
-    <p><b>Phone:</b> 9637113928</p>
-    <p><b>Email:</b> poojarinde@gmail.com</p>
+    <p><b>Phone :</b> 9637113928</p>
+    <p><b>Email :</b> poojarinde@gmail.com</p>
 
-    <form id="contactForm" class="contact-form">
+    <form id="contactForm">
       <input type="text" id="name" placeholder="Your Name">
       <input type="email" id="email" placeholder="Your Email">
-      <textarea id="message" placeholder="Your Message"></textarea>
-      <button type="submit">Send Message</button>
-
-      <p id="formMsg"></p>
+      <textarea id="message" placeholder="Message"></textarea>
+      <button type="submit" class="btn">Send Message</button>
+      <small id="formMsg"></small>
     </form>
   </div>
 </section>
 
+<footer>
+  <p>© 2026 Pooja Rinde | Portfolio</p>
+</footer>
 
 <!-- MODALS -->
-
-<div class="modal" id="modal1">
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <h3>BidNow – Real Time Bidding System</h3>
+<div class="modal" id="bidnowModal">
+  <div class="modal-box">
+    <span class="close" onclick="closeModal('bidnow')">&times;</span>
+    <h3>BidNow – Real Time Bidding Platform</h3>
     <p>
-      Real-time bidding platform with Admin, Auctioneer and Bidder dashboards.
+      Full stack auction system built using Node.js, Express and MongoDB.
+      Supports real-time bidding, role based dashboards and admin management.
     </p>
-    <p><b>Tech:</b> HTML, CSS, JavaScript, Node.js, Express.js, MongoDB</p>
   </div>
 </div>
 
-<div class="modal" id="modal2">
-  <div class="modal-content">
-    <span class="close">&times;</span>
+<div class="modal" id="portfolioModal">
+  <div class="modal-box">
+    <span class="close" onclick="closeModal('portfolio')">&times;</span>
     <h3>Personal Portfolio Website</h3>
     <p>
-      Responsive portfolio website with modern UI and animations.
+      Responsive portfolio website developed using HTML, CSS and JavaScript
+      with animations and modern UI design.
     </p>
-    <p><b>Tech:</b> HTML, CSS, JavaScript</p>
   </div>
 </div>
 
